@@ -15,18 +15,23 @@ task stringsAndTypes << {
 
 
     // TODO: Crie uma variável chamada foo e atribua a ela o valor 4.2
+    def foo = 4.2
 
     // TODO: Imprima o valor e a classe de foo
+    println " O Valor de foo é $foo e a classe de foo é   ${foo.class} "
 
     // TODO: Use interpolação de strings para exibir a raiz de 127
     // Dica: http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
+    println "A raiz de 127 é ${Math.sqrt(127)}"
 
     // TODO: Atribua a data corrente para foo e a imprima, com o seu tipo logo a seguir.
     // Dica: http://docs.oracle.com/javase/7/docs/api/java/util/package-summary.html
+    foo = Date.getDate;
+    println  " A data atual  é $foo e seu tipo é ${foo.class}"
 
     // TODO: Utilize substring para extrair Jeremy da seguinte string:
     def hello = "Hello, Jeremy.";
-
+    println hello.substring(7,hello.length()-1)
     
 
 }
@@ -34,6 +39,10 @@ task stringsAndTypes << {
 task closures << {
     // TODO: Declare uma closure que pega dois argumentos e os soma.
     // DICA: http://www.groovy-lang.org/closures.html
+
+    def somaNumeros(x, y) {
+        x + y
+    }
 
     // TODO: Chama sua closure com os argumentos 17 e 25, e imprima o resultado.
     // Cuidado: `println addTwo 17, 25` é ambíguo.
