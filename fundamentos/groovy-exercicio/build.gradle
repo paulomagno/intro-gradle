@@ -41,14 +41,15 @@ task closures << {
     // TODO: Declare uma closure que pega dois argumentos e os soma.
     // DICA: http://www.groovy-lang.org/closures.html
 
-    def funcao = somaNumeros(numero1,numero2) {
-        numero1 + numero2;
+    def somaNumeros(x,y) {
+        x + y
     }
 
 
     // TODO: Chama sua closure com os argumentos 17 e 25, e imprima o resultado.
     // Cuidado: `println addTwo 17, 25` é ambíguo.
-    println " ${funcao(17,25)}"
+
+    println " ${somaNumeros 17,25}"
 }
 
 task lists << {
