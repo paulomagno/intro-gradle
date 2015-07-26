@@ -8,6 +8,7 @@ então, para testar, você precisará rodar as tasks.
 
 */
 
+
 task stringsAndTypes << {
 
     // TODO: Rode `$ gradle sAT`
@@ -32,7 +33,7 @@ task stringsAndTypes << {
     // TODO: Utilize substring para extrair Jeremy da seguinte string:
     def hello = "Hello, Jeremy.";
     println hello.substring(7,hello.length()-1)
-    
+
 
 }
 
@@ -40,17 +41,23 @@ task closures << {
     // TODO: Declare uma closure que pega dois argumentos e os soma.
     // DICA: http://www.groovy-lang.org/closures.html
 
-    def somaNumeros(x, y) {
-        x + y
+    def funcao = somaNumeros(numero1,numero2) {
+        numero1 + numero2;
     }
+
 
     // TODO: Chama sua closure com os argumentos 17 e 25, e imprima o resultado.
     // Cuidado: `println addTwo 17, 25` é ambíguo.
+    println " ${funcao(17,25)}"
 }
 
 task lists << {
     // TODO: Declare uma lista com 5 strings
 
     // TODO: Print cada string com letras maiusculas
+    def listaString = ["String1", "String2", "String3","String4","String5"]
+
+    def imprimaItemLista = {item -> println " $item.toUpperCase()"}
+    listaString.each(imprimaItemLista)
 
 }
